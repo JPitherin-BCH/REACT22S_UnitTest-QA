@@ -17,7 +17,7 @@ test("renders the correct content", () => {
 });
 
 
-// Normally you can mock teh entire module using jest.mock('./api')
+// Normally you can mock the entire module using jest.mock('./api')
 // This tutorial was made using codesandbox.io
 // which isn't compatible with that for some reason
 // https://jestjs.io/docs/mock-functions#mocking-modules
