@@ -22,7 +22,8 @@ test("allows users to add items to their list", () => {
 
   fireEvent.change(input, { target: { value: "Feed cats" } });
   fireEvent.click(button);
-  // for more user interactions: @testing-library/user-event
+  // look at @testing-library/user-event for more interactions
+  // https://testing-library.com/docs/user-event/intro
 
   getByText("Feed cats");
   getByText("Add #2");
