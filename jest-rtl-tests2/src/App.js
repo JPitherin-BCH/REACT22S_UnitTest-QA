@@ -1,7 +1,9 @@
 import React from "react";
 import './App.css';
 
-function App() {
+import { api } from "./api";
+
+export const App = () => {
   const [items, setItems] = React.useState([]);
   const [text, setText] = React.useState("");
 
@@ -21,6 +23,12 @@ function App() {
 
     setText("");
     setItems(items.concat(newItem));
+
+    //// async API 
+    //api.createItem("/items", newItem).then((persistedItem) => {
+    //  setText("");
+    //  setItems(items.concat(persistedItem));
+    //});
   };
 
   return (
@@ -41,6 +49,4 @@ function App() {
       </form>
     </div>
   );
-}
-
-export default App;
+};
