@@ -4,8 +4,6 @@ import React from "react";
 import App from './App';
 import api from './api';
 
-
-
 test("renders the correct content", () => {
   const { getByText, getByLabelText } = render(<App />);
 
@@ -16,12 +14,13 @@ test("renders the correct content", () => {
 
 });
 
-
 // Normally you can mock the entire module using jest.mock('./api')
 // This tutorial was made using codesandbox.io
 // which isn't compatible with that for some reason
 // https://jestjs.io/docs/mock-functions#mocking-modules
 const mockCreateItem = (api.createItem = jest.fn());
+
+// to use api.js, un-comment lines 27-31 and comment lines 24-25 in App.js
 
 // simulating api interaction
 test("allows users to add items to their list", async () => {
